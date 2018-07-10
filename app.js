@@ -6,7 +6,7 @@ const launcher = new ApolloEngineLauncher({
   // in the ENGINE_API_KEY environment variable.
   apiKey: process.env.API_KEY,
   logging: {
-    level: "DEBUG"
+    level: process.env.LOG_LEVEL
   },
   origins: [{
     http: {
