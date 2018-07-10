@@ -12,7 +12,7 @@ const launcher = new ApolloEngineLauncher({
     http: {
       // The URL that the Proxy should use to connect to your
       // GraphQL server.
-      url: 'https://em-casa-backend-staging.herokuapp.com/graphql_api',
+      url: process.env.BACKEND_URL,
       overrideRequestHeaders: {
           Host: "em-casa-backend-staging.herokuapp.com"
       }
