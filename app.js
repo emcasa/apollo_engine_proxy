@@ -14,7 +14,7 @@ const launcher = new ApolloEngineLauncher({
       // GraphQL server.
       url: process.env.BACKEND_URL,
       overrideRequestHeaders: {
-          Host: "em-casa-backend-staging.herokuapp.com"
+          Host: process.env.HOST
       }
     },
   }],
