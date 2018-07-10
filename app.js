@@ -4,7 +4,7 @@ const { ApolloEngineLauncher } = require('apollo-engine');
 const launcher = new ApolloEngineLauncher({
   // Enter your API key from step 2 above. You can also provide this
   // in the ENGINE_API_KEY environment variable.
-  // apiKey: 'API_KEY',
+  apiKey: process.env.API_KEY,
   logging: {
     level: "DEBUG"
   },
@@ -24,8 +24,8 @@ const launcher = new ApolloEngineLauncher({
   // 'port' is process.env.PORT, and the default for endpoints is
   // ['/graphql'].
   frontends: [{
-    // host: "em-casa-apollo-engine-staging.herokuapp.com",
-    endpoints: ['/graphql_api'],
+    port: process.env.PORT,
+    endpoints: ['/graphql_api']
   }],
 });
 
