@@ -24,7 +24,7 @@ const launcher = new ApolloEngineLauncher({
   // 'port' is process.env.PORT, and the default for endpoints is
   // ['/graphql'].
   frontends: [{
-    port: process.env.PORT,
+    port: parseInt(process.env.PORT, 10),
     endpoints: ['/graphql_api']
   }],
 });
