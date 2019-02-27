@@ -14,7 +14,7 @@ const launcher = new ApolloEngineLauncher({
       // GraphQL server.
       url: process.env.BACKEND_URL,
       overrideRequestHeaders: {
-          Host: process.env.HOST
+        Host: process.env.HOST
       }
     },
   }],
@@ -25,7 +25,10 @@ const launcher = new ApolloEngineLauncher({
   // ['/graphql'].
   frontends: [{
     port: parseInt(process.env.PORT, 10),
-    endpoints: ['/graphql_api']
+    endpoints: ['/graphql_api'],
+    overrideResponseHeaders: {
+      'Access-Control-Allow-Headers': 'apollographql-client-name, apollographql-client-version'
+    }
   }],
 });
 
