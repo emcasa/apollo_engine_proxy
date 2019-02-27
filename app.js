@@ -26,7 +26,7 @@ const launcher = new ApolloEngineLauncher({
   frontends: [{
     port: parseInt(process.env.PORT, 10),
     endpoints: ['/graphql_api'],
-    overrideResponseHeaders: {
+    overrideGraphqlResponseHeaders: {
       'Access-Control-Allow-Headers': 'apollographql-client-name, apollographql-client-version'
     }
   }],
